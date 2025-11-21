@@ -1,4 +1,4 @@
-import Parser from 'rss-parser';
+import Parser from 'rss-parser'; // library for turning RSS XML feeds into JavaScript objects.
 
 const parser = new Parser();
 
