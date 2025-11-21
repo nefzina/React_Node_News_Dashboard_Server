@@ -2,6 +2,7 @@ import { Router } from 'express';
 import type { Request, Response } from 'express';
 import { fetchArticles } from '../services/rssService.ts';
 import type { Article } from '../api/articles/articleModel.ts';
+
 const router = Router();
 
 const feeds = {
@@ -25,6 +26,7 @@ const feeds = {
 router.get('/:category', async (req: Request, res: Response) => {
   const { category } = req.params;
   const urls = feeds[category as keyof typeof feeds];
+  console.log('category needed', category);
 
   if (!urls) {
     return res.status(404).json({ error: 'Category not found' });
