@@ -1,14 +1,19 @@
 {
   "dependencies": {
+    "@google/genai": "^1.30.0",
+    "cheerio": "^1.1.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "node-cache": "^5.1.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.9.1",
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
@@ -31,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "npx nodemon --watch src --ext ts,json --exec ts-node src/server.ts",
+    "dev": "npx nodemon --watch src --ext ts,json --exec ts-node src/common/server.ts",
     "lint": "eslint 'src/**/*.ts'",
     "fix": "prettier --write . && eslint --fix --ext .ts ."
   },
