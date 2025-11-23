@@ -12,8 +12,8 @@ app.use(
     origin: 'http://localhost:5173',
     methods: ['GET'],
   }),
-);
-
+  );
+  
 // Root route
 app.get('/', (req: Request, res: Response) => {
   res.json({ message: 'Welcome to the React/Node News Dashboard API 🚀' });
